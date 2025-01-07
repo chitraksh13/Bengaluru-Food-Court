@@ -1,0 +1,273 @@
+/* Root variables for brand colors */
+:root {
+  --header-bg: #37474F;
+  --accent-bg: #ff7043;
+  --accent-hover: #ff5722;
+  --text-color: #333;
+  --section-bg: #faf3e0;
+  --card-bg: #fff3e0;
+  --highlight: #ff5722;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--section-bg);
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column; /* Stack logo and navigation vertically */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* LOGO ROW */
+.logo-row {
+  background-color: var(--header-bg);
+  padding: 10px 5%; /* Use percentage for responsive padding */
+  display: flex;
+  justify-content: space-between; /* Align logo and other elements properly */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-wrapper img {
+  max-height: 60px; /* Set height to scale responsively */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+}
+
+/* NAVIGATION ROW */
+.nav-row {
+  background-color: #ff5722;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 8px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffccbc;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url("images/idli-sambar-vada-in-wembly-indian-restaurant-1024x601.png")
+      no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* COUNTER SECTION */
+.counter-section {
+  padding: 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.counter-section h2 {
+  font-size: 2.2rem;
+  color: var(--highlight);
+  margin-bottom: 20px;
+}
+
+.counter-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* MENU WRAPPER */
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px auto 0;
+  max-width: 900px;
+}
+
+.menu-section {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.menu-section h3 {
+  font-size: 1.6rem;
+  color: var(--accent-bg);
+  margin-bottom: 10px;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #ddd;
+}
+
+.menu-section li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--accent-bg);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+
+/* Small Devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .logo-wrapper img {
+      max-height: 50px; /* Reduce size for smaller screens */
+  }
+
+  .hero-content h1 {
+      font-size: 1.5rem;
+  }
+
+  .hero-content p {
+      font-size: 1rem;
+  }
+
+  nav a {
+      font-size: 14px;
+      padding: 6px;
+  }
+
+  .menu-wrapper {
+      padding: 10px;
+  }
+
+  .menu-section h3 {
+      font-size: 1.4rem;
+  }
+
+  .menu-section li {
+      font-size: 0.9rem;
+  }
+}
+
+/* Medium Devices (max-width: 900px) */
+@media (max-width: 900px) {
+  .logo-wrapper img {
+      max-height: 55px; /* Slightly larger for medium screens */
+  }
+
+  .hero-section {
+      height: 70vh;
+  }
+
+  nav a {
+      font-size: 15px;
+  }
+
+  .counter-section h2 {
+      font-size: 2rem;
+  }
+
+  .counter-section p {
+      font-size: 1rem;
+  }
+
+  .menu-section h3 {
+      font-size: 1.5rem;
+  }
+
+  .menu-section li {
+      font-size: 1rem;
+  }
+}
+
+/* Large Devices (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .hero-section {
+      height: 75vh;
+  }
+
+  .menu-wrapper {
+      padding: 15px;
+  }
+
+  .menu-section {
+      padding: 15px;
+  }
+}
