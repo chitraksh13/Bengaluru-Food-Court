@@ -90,7 +90,7 @@ nav a:hover {
   position: relative;
   width: 100%;
   height: 80vh;
-  background: url("Images/pexels-fariphotography-905847.jpg") no-repeat center center/cover;
+  background: url("pexels-fariphotography-905847.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
